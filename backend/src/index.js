@@ -9,6 +9,7 @@ import paymentRoutes from './routes/payment.js';
 import userRoutes from './routes/user.js';
 import webhookRoutes from './routes/webhook.js';
 import eventRoutes from './routes/event.js';
+import dashboardRoutes from './routes/dashboard.js';
 
 // Load environment variables
 dotenv.config();
@@ -27,6 +28,7 @@ app.use('/api/payments', paymentRoutes);
 app.use('/api/users', userRoutes);
 app.use('/api/webhooks', webhookRoutes);
 app.use('/api/events', eventRoutes);
+app.use('/api/dashboard', dashboardRoutes);
 
 // Connect to MongoDB
 mongoose.connect(process.env.MONGO_URI, {
